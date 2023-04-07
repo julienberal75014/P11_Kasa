@@ -1,21 +1,28 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 const CardWrapper = styled.section`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 40px;
+  justify-content: center;
+  gap: 50px;
   flex-wrap: wrap;
-  padding: 56px 50px;
+  padding: 56px 10px;
+
+  @media (max-width: 768px) {
+    padding: 0px;
+    width: 100%;
+  }
 `;
 
 const CardBlock = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const CardImg = styled.img`
@@ -24,8 +31,13 @@ const CardImg = styled.img`
   height: 340px;
   border-radius: 10px;
   object-fit: cover;
+
+  @media (max-width: 768px) {
+    width: auto;
+  }
 `;
 
+// revoir dans le responsive le filtre gradient qui ne se met plus en place
 const CardGradient = styled.div`
   background: linear-gradient(
     180deg,
@@ -39,6 +51,10 @@ const CardGradient = styled.div`
   display: flex;
   align-items: end;
   white-space: normal;
+
+  @media (max-width: 768px) {
+    width: auto;
+  }
 `;
 
 const CardTitle = styled.p`
@@ -59,17 +75,17 @@ function Card() {
       .catch((error) => console.log(error));
   }, []);
 
-  console.log(data);
-
   return (
     <CardWrapper>
       {data.map(({ id, title, cover }) => (
-        <CardBlock key={id}>
-          <CardImg src={cover} alt={title} />
-          <CardGradient>
-            <CardTitle>{title}</CardTitle>
-          </CardGradient>
-        </CardBlock>
+        <Link to={`/housing/${id}`} key={id}>
+          <CardBlock>
+            <CardImg src={cover} alt={title} />
+            <CardGradient>
+              <CardTitle>{title}</CardTitle>
+            </CardGradient>
+          </CardBlock>
+        </Link>
       ))}
     </CardWrapper>
   );

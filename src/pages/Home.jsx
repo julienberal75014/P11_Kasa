@@ -6,6 +6,9 @@ const HomeContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0px 100px;
+
+  @media (max-width: 768px) {
+    padding: 0px 20px;
 `;
 
 const CardContainer = styled.div`
@@ -15,6 +18,12 @@ const CardContainer = styled.div`
   border-radius: 25px;
   width: 100%;
   margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    background: #ffffff;
+    border-radius: 0px;
+    width: 100%;
+  }
 `;
 
 function Home() {

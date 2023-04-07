@@ -10,7 +10,7 @@ const FooterContainer = styled.div`
   background-color: #000000;
   width: 100%;
   position: relative;
-  bottom: 0;
+  bottom: -66px;
   height: auto;
 `;
 
@@ -24,6 +24,11 @@ const FooterText = styled.p`
   color: #ffffff;
   font-size: 24px;
   margin: 0px 0px 29px 0px;
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+    margin: 0px 0px 50px 0px;
+  }
 `;
 
 function Footer() {
