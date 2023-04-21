@@ -33,11 +33,11 @@ const CardImg = styled.img`
   object-fit: cover;
 
   @media (max-width: 768px) {
-    width: auto;
+    width: 100%;
+    max-width: 454px;
   }
 `;
 
-// revoir dans le responsive le filtre gradient qui ne se met plus en place
 const CardGradient = styled.div`
   background: linear-gradient(
     180deg,
@@ -53,7 +53,8 @@ const CardGradient = styled.div`
   white-space: normal;
 
   @media (max-width: 768px) {
-    width: auto;
+    width: 100%;
+    max-width: 454px;
   }
 `;
 
@@ -78,7 +79,7 @@ function Card() {
   return (
     <CardWrapper>
       {data.map(({ id, title, cover }) => (
-        <Link to={`/housing/${id}`} key={id}>
+        <Link to={`/housing/${id}`} key={id} style={{ position: "relative" }}>
           <CardBlock>
             <CardImg src={cover} alt={title} />
             <CardGradient>

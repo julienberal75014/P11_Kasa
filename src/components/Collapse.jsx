@@ -1,13 +1,12 @@
 import styled from "styled-components";
 import { useState } from "react";
-import PropTypes from "prop-types";
 import Arrow from "../assets/arrow_down.png";
 
 const CollapseContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0px 100px;
   margin-bottom: 20px;
+  flex: 1;
 
   @media (max-width: 768px) {
     padding: 0px;
@@ -93,10 +92,5 @@ function Collapse({ title, content }) {
     </CollapseContainer>
   );
 }
-
-Collapse.propTypes = {
-  title: PropTypes.string,
-  content: PropTypes.string,
-};
 
 export default Collapse;

@@ -15,13 +15,15 @@ const root = createRoot(document.getElementById("root"));
 
 root.render(
   <BrowserRouter>
-    <Header />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/housing" element={<Housing />} />
-      <Route path="/about" element={<About />} />
-      <Route path="*" element={<Error />} />
-    </Routes>
+    <div className='App'>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/housing/:id" element={<Housing />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </div>
     <Footer />
   </BrowserRouter>
 );

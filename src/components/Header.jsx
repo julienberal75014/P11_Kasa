@@ -29,6 +29,10 @@ const StyledLink = styled(Link)`
     text-decoration-line: underline;
   }
 
+  &:active {
+    text-decoration-line: underline;
+  }
+
   @media (max-width: 768px) {
     font-size: 16px;
   }
@@ -50,7 +54,7 @@ function Header() {
     <HeaderContainer>
       <MainLogo src={Logo} alt="Logo Kasa" />
       <LinkDiv>
-        <StyledLink to="/">Accueil</StyledLink>
+        <StyledLink to="/">Accueil </StyledLink>
         <StyledLink to="/about">A propos</StyledLink>
       </LinkDiv>
     </HeaderContainer>

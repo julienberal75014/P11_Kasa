@@ -35,6 +35,7 @@ const RedirectionLink = styled(Link)`
   color: #ff6060;
   font-size: 18px;
   text-decoration-line: underline;
+  margin-bottom: 150px;
 
   @media (max-width: 890px) {
     font-size: 14px;

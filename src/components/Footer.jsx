@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Logo from "../assets/logo_footer.png";
 
 const FooterContainer = styled.div`
+  margin-top: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,9 +10,6 @@ const FooterContainer = styled.div`
   height: 209px;
   background-color: #000000;
   width: 100%;
-  position: relative;
-  bottom: -66px;
-  height: auto;
 `;
 
 const FooterLogo = styled.img`
