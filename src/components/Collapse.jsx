@@ -34,7 +34,6 @@ const Content = styled.div`
   border-radius: 5px;
   width: auto;
   height: auto;
-  text-align: justify;
   color: #ff6060;
   padding: 27px 18px 10px 18px;
   margin-bottom: 10px;
@@ -42,7 +41,6 @@ const Content = styled.div`
 
   @media (max-width: 768px) {
     font-size: 16px;
-    text-align: left;
   }
 `;
 
@@ -57,7 +55,7 @@ const ArrowDownImg = styled.img`
   }
 `;
 
-function Collapse({ title, content }) {
+function Collapse({ title, content, style }) {
   const [open, setOpen] = useState(false);
 
   const toogle = () => {

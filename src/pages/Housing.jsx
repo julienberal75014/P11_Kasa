@@ -183,6 +183,12 @@ function Housing() {
     }
   }
 
+  function collaspeFontSize() {
+    if (window.innerWidth > 768) {
+      return "18px";
+    }
+  }
+
   return (
     <HousingContainer>
       <Slideshow housingPictures={picture} />
@@ -209,11 +215,19 @@ function Housing() {
         </HostAndRating>
       </HousingInfo>
       <ThirdRow>
-        <Collapse title={"Description"} content={description} />
         <Collapse
+          title={"Description"}
+          content={
+            <span style={{ fontSize: collaspeFontSize() }}>{description}</span>
+          }
+        />
+        <Collapse
+          style={{ fontSize: collaspeFontSize() }}
           title={"Equipements"}
           content={equipments.map((equipment) => (
-            <li key={equipment}>{equipment}</li>
+            <li style={{ fontSize: collaspeFontSize() }} key={equipment}>
+              {equipment}
+            </li>
           ))}
         />
       </ThirdRow>

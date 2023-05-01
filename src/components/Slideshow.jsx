@@ -6,6 +6,7 @@ import RightArrow from "../assets/right_arrow.png";
 const SlideshowContainer = styled.div`
   display: flex;
   flex-direction: column;
+  position: relative;
 `;
 
 const SlideShowImg = styled.img`
@@ -18,62 +19,38 @@ const SlideShowImg = styled.img`
 const LeftArrowImg = styled.img`
   width: 47px;
   position: absolute;
-  top: 31%;
+  top: 40%;
   transform: translate(0; -50%);
-  left: 200px;
+  left: 16px;
   zindex: 1;
   cursor: pointer;
-  margin-left: 8%;
-
-  @media (max-width: 1700px) {
-    left: 150px;
-    margin-left: 4%;
-  }
-
-  @media (max-width: 1500px) {
-    left: 125px;
-    margin-left: 0px;
-  }
 
   @media (max-width: 768px) {
     width: 24px;
-    top: 28%;
-    left: 50px;
+    top: 45%;
   }
 
   @media (min-width: 350px) and (max-height: 850px) {
-    top: 30%;
+    top: 46%;
   }
 `;
 
 const RightArrowImg = styled.img`
   width: 47px;
   position: absolute;
-  top: 31%;
+  top: 40%;
   transform: translate(0; -50%);
-  right: 200px;
+  right: 16px;
   zindex: 1;
   cursor: pointer;
-  margin-right: 8%;
-
-  @media (max-width: 1700px) {
-    right: 150px;
-    margin-right: 4%;
-  }
-
-  @media (max-width: 1500px) {
-    right: 125px;
-    margin-right: 0px;
-  }
 
   @media (max-width: 768px) {
     width: 24px;
-    top: 28%;
-    right: 50px;
+    top: 45%;
   }
 
   @media (min-width: 350px) and (max-height: 850px) {
-    top: 30%;
+    top: 46%;
   }
 `;
 
@@ -82,17 +59,12 @@ const NumberText = styled.p`
   font-size: 18px;
   font-weight: 700;
   position: absolute;
-  bottom: 42%;
+  bottom: 2%;
   right: 50%;
   left: 50%;
   width: max-content;
 
-  @media (max-width: 768px) {
-    bottom: 47%;
-  }
-
   @media (min-width: 350px) and (max-height: 850px) {
-    bottom: 41%;
     left: 46%;
   }
 `;
