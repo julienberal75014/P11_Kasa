@@ -40,6 +40,10 @@ const LeftArrowImg = styled.img`
     top: 28%;
     left: 50px;
   }
+
+  @media (min-width: 350px) and (max-height: 850px) {
+    top: 30%;
+  }
 `;
 
 const RightArrowImg = styled.img`
@@ -67,6 +71,10 @@ const RightArrowImg = styled.img`
     top: 28%;
     right: 50px;
   }
+
+  @media (min-width: 350px) and (max-height: 850px) {
+    top: 30%;
+  }
 `;
 
 const NumberText = styled.p`
@@ -80,7 +88,12 @@ const NumberText = styled.p`
   width: max-content;
 
   @media (max-width: 768px) {
-    display: none;
+    bottom: 47%;
+  }
+
+  @media (min-width: 350px) and (max-height: 850px) {
+    bottom: 41%;
+    left: 46%;
   }
 `;
 

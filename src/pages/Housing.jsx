@@ -175,9 +175,11 @@ function Housing() {
   let ratingArray = [];
   for (let i = 0; i < 5; i++) {
     if (i < rating) {
-      ratingArray.push(<RatingImg src={RedStar} alt="star" />);
+      ratingArray.push(<RatingImg key={"star" + i} src={RedStar} alt="star" />);
     } else {
-      ratingArray.push(<RatingImg src={GreyStar} alt="star" />);
+      ratingArray.push(
+        <RatingImg key={"star" + i} src={GreyStar} alt="star" />
+      );
     }
   }
 

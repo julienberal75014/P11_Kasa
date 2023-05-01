@@ -9,7 +9,7 @@ import About from './pages/About';
 import Error from './pages/Error';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import "./assets/styles/global.css"
+import "./assets/styles/global.css";
 
 const root = createRoot(document.getElementById("root"));
 
